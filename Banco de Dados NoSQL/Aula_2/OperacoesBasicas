@@ -1,0 +1,25 @@
+db.Aluno.insert({ 
+"nome":"Jose", 
+"birthday": ISODate("1988-05-10"), 
+"group": "NoSQL" 
+})
+
+db.Aluno.insert({ 
+"nome":"Marcelo", 
+"birthday": ISODate("1988-01-01"), 
+"group": "NoSQL" 
+})
+
+db.Aluno.insert({ "nome":"Robert", 
+"birthday": ISODate("1988-10-10"), 
+"group": "NoSQL" 
+})
+
+db.Aluno.insert({ "nome":"Alan", 
+"birthday": ISODate("1988-04-05"), 
+"group": "NoSQL" 
+})
+
+##também poderia inserir com o comando db.Aluno.insertMany({"inserir como lista","inserir como lista"})
+
+
