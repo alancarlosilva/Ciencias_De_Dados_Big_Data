@@ -1,0 +1,15 @@
+NOTAS DE AULA
+
+git clone https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data.git
+
+git status
+
+git add .
+
+git commit -m "upload"
+
+git push
+
+git config --global user.email "a...s@gmail.com"
+
+git config --global user.name "a...a"
