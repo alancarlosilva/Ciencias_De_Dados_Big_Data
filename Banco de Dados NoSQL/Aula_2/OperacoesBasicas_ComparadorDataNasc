@@ -1,5 +1,8 @@
 #.find eu faço a pesquisa, .sort eu ordeno as datas de nascimento, .limit(1) eu mostro apenas a menor data de nascimento
-db.Aluno.find({ }).sort({ 
-"birthday":1 
-}).limit(1)
+
+db.Aluno.find({ }).sort(
+	{ 
+	 "birthday":1 
+	}
+).limit(1)
 

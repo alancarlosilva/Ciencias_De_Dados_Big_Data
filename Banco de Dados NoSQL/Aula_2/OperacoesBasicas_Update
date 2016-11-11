@@ -1,0 +1,11 @@
+# $set atualização
+
+db.Aluno.update(
+	{ "nome": "Alan" }, 
+	{ $set:
+		{ 		   
+		  "note":5 
+		}
+	}
+)
+

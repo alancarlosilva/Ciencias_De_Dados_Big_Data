@@ -1,0 +1,8 @@
+#Remover uma linha do banco
+
+db.Aluno.remove(
+	{
+	  "nome": "Marcelo"
+	}
+)
+
