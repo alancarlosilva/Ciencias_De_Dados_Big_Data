@@ -1,15 +1,20 @@
 NOTAS DE AULA
 
+#cria um diretório local
 git clone https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data.git
 
+#mostra todas as pastas a serem submetidas
 git status
 
+#add as pastas a serem commitadas
 git add .
 
+#faz o upload dos arquivos
 git commit -m "upload"
 
+#transfere e deleta arquivos repetidos
 git push
 
+#configura usuário caso não tenha sido configurado no local
 git config --global user.email "a...s@gmail.com"
-
 git config --global user.name "a...a"
