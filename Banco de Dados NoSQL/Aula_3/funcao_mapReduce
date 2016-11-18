@@ -22,6 +22,7 @@ db.Vocabulary.mapReduce(
 		reduce,
 		{
 			query: { text: {$in: [/((ar)|(er)|(ir)|(or)|(ur))$/]}},
-			out: "resultado"}
+			out: "resultado"
+		}
 ) 
 
