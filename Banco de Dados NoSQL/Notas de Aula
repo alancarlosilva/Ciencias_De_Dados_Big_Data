@@ -7,7 +7,7 @@ git clone https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data.git
 git status
 
 #add as pastas a serem commitadas
-git add.
+git add .
 
 #faz o upload dos arquivos
 git commit -m "upload"
