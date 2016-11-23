@@ -1,0 +1,58 @@
+db.Vocabulary.find({"text":"feliz"}).explain("executionStats",1)
+{
+	"queryPlanner" : {
+		"plannerVersion" : 1,
+		"namespace" : "nosqlclass.Vocabulary",
+		"indexFilterSet" : false,
+		"parsedQuery" : {
+			"text" : {
+				"$eq" : "feliz"
+			}
+		},
+		"winningPlan" : {
+			"stage" : "COLLSCAN",
+			"filter" : {
+				"text" : {
+					"$eq" : "feliz"
+				}
+			},
+			"direction" : "forward"
+		},
+		"rejectedPlans" : [ ]
+	},
+	"executionStats" : {
+		"executionSuccess" : true,
+		"nReturned" : 1,
+		"executionTimeMillis" : 77,
+		"totalKeysExamined" : 0,
+		"totalDocsExamined" : 291214,
+		"executionStages" : {
+			"stage" : "COLLSCAN",
+			"filter" : {
+				"text" : {
+					"$eq" : "feliz"
+				}
+			},
+			"nReturned" : 1,
+			"executionTimeMillisEstimate" : 80,
+			"works" : 291216,
+			"advanced" : 1,
+			"needTime" : 291214,
+			"needYield" : 0,
+			"saveState" : 2275,
+			"restoreState" : 2275,
+			"isEOF" : 1,
+			"invalidates" : 0,
+			"direction" : "forward",
+			"docsExamined" : 291214
+		}
+	},
+	"serverInfo" : {
+		"host" : "virtualbox",
+		"port" : 27017,
+		"version" : "3.2.10",
+		"gitVersion" : "79d9b3ab5ce20f51c272b4411202710a082d0317"
+	},
+	"ok" : 1
+}
+
