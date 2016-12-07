@@ -18,3 +18,6 @@ git push
 #configura usuário caso não tenha sido configurado no local
 git config --global user.email "a...s@gmail.com"
 git config --global user.name "a...a"
+
+Text mining
+https://www.r-bloggers.com/text-mining-in-r-and-python-8-tips-to-get-started/
