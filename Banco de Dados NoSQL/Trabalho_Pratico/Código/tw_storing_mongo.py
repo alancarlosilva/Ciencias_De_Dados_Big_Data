@@ -10,10 +10,10 @@ from tweepy.streaming import StreamListener
 from tweepy.auth import OAuthHandler
 from tweepy import Stream
 
-consumer_key= "7vVsGaGwDuwbLmjXKkQa7d76R"
-consumer_secret= "TpFRYuo3nMHlAgvKZFU4oxqNy8GqrO48teBQoW940TawXwnCfn"
-access_token= "198026850-rb8rXQSzo85FsaK8jgfWhMXHVN4RKF1t9KpjVljK"
-access_token_secret= "IaXlTJMeqFXZ2a6t4X9BtVrJdAS6edc1pTgxlZA9ZxeqP"
+consumer_key= ""
+consumer_secret= ""
+access_token= ""
+access_token_secret= ""
 
 #grabs the system time
 #start_time = time.time()
