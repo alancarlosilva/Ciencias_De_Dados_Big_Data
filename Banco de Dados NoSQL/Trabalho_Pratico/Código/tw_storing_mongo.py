@@ -16,40 +16,31 @@ access_token= ""
 access_token_secret= ""
 
 #grabs the system time
-#start_time = time.time()
+start_time = time.time()
 
 #track list
-#keyword_list = ['twitter']
+keyword_list = ['*']
 
-#Creates an OAuthHandler instance to handle OAuth credentials
-#Creates a listener instance with a start time and time parameters passed to it
-#Creates an StreamListener instance with the OAuthHandler instance and the listener instance
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
-## MODIFICAR ESSA PARTE
-#public_tweets = api.home_timeline()
-#for tweet in public_tweets:
-#    print (tweet.text)
-
 class MyListener(StreamListener):
 
         def on_data(self, data):
-                try:
-                        with open('python.json', 'a') as f:
-                                f.write(data)
-                                return True
-                        
-                        except BaseException as e:
-                                print str(e)
-                                return True
-       def on_error(self, status):
-              print(status)
-              return True
+           
+		client = pymongo.MongoClient()
+		db  = client.db_nosql
+		collection = db.tweets
+		
+		tweet = json.loads(data)
+
+		collection.insert(tweet)
+		
+		return True
         
 twitter_stream = Stream(auth, MyListener())
-twitter_stream.filter(track=['#python'])
+twitter_stream.filter(track=keyword_list, languages=['pt_br'])
                 
 
 
