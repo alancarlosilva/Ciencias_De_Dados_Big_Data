@@ -109,10 +109,31 @@ Usando as técnicas de agregação é muito simples encontrar os nomes mais popu
 + 4 - White Hart
 + 5 - Crown
 
+Podemo atráves de agregação verificar se algum dos pubs top 5 está perto da sua localização atráves do seguinte código:
+```python
+pipeline = [
+	{ "$match" : { "location": [__sua_localizacao_latitude_longitude__]
+                 { "$within": { "$centerSphere": [[-0.12, 51.516], 2 / 3959] }}}
+    },
+    { "$group" : { "_id" : "$name", "value" : { "$sum" : 1 } }
+    },
+    { "$sort" : { "value" : -1 } },
+    { "$limit" : 5 }
+]
+
+pprint.pprint(list(collection.aggregate(pipeline)))
+```
+
 >**Curiosidade**: Tanto o método de pipeline quanto o de mapReduce levaram em média 0.9 segundos para serem executados.
 
 ###Considerações finais
 Apesar da curva de aprendizado do MongoDB ser um pouco longa, pode se dizer que esse tipo de banco de dados é bastante útil para armazenar dados coletados na web, como por exemplo, as redes sociais e dados geolocalizados. Ele elimina a necessidade de escrever uma analisador, uma vez que você analisa os dados em tempo real. Conhecer a estrutura dos subdocumentos dos documentos nesse banco de dados nos ajuda melhor entender a programaçaõ para executar análises em Python(Ou outra linguagem de fácil conexão com o Mongo) usando MongoDB.
+
+>repositório: [trabalho_pratico_github](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/tree/master/Banco%20de%20Dados%20NoSQL) 
+
+>**Referências**: http://api.mongodb.com/python/current/examples/aggregation.html
+https://www.mongodb.com/blog/post/the-most-popular-pub-names
+https://github.com/robbierobert/MongoDB/blob/master/introPyMongo.md
 
 
 
