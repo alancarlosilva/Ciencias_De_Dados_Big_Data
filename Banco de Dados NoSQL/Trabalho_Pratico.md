@@ -48,9 +48,9 @@ for documento in myQuery:
 >Essa operação irá trazer uma query dos pubs existentes na coleção pubs, também poderíamos ter usado a biblioteca pprint para imprimir a query em formato JSON
 
 ###Algoritmos de agregação
-Existem vários modos agregação no MongoDB, nesse trabalho será demostrados as técnicas de pipeline e map reduce.
+Existem vários modos agregação no MongoDB, nesse trabalho serão demostrados as técnicas de pipeline e map reduce para verificarmos os termos mais frequentes, nesse caso os pubs mais populares.
 
-**MapReduce**: Modelo para processar um grande volume de dados, dividindo o trabalho em um conjunto de tarefas.
+**MapReduce**: Modelo para processar um grande volume de dados, dividindo o trabalho em um conjunto de tarefas. Nesse modelo definimos as funções map e reduce para contar o número de ocorrências de cada nome na matriz de nomes, atráves de toda a coleção.
 
 **MapReduce em Python**
 ```python
@@ -78,4 +78,43 @@ result_pubs = db.pubs.map_reduce(mapper, reducer, "result", query={"name": {"$lt
 for document in result_pubs.find():
 	pprint.pprint(document)
 ```
+**Pipeline**: O modelo Pipeline utiliza múltiplos estágios para transformação e processamento de documentos, são eles, unwind da matriz de nomes, agrupamento e classificação por contagem. Nesse exemplo executamos uma agregação simples para contar o número de ocorrência de cada nome de pub na matriz de nomes em toda a coleção.
+
+**Pipeline em Python**
+
+```python
+pipeline = [
+	#Aqui fazemos o agrupamento de documentos pelo name e somamos 1 para cada nome igual encontrado
+	{"$group": {"_id": "$name", "value": {"$sum": 1}}},
+  	
+  	#Ordenamos o pipeline anterior  	
+  	{"$sort": {"value": -1}},
+
+  	#Limitamos a pesquisa de pubs em 5
+  	{"$limit": 5}
+]
+```
+**Imprimindo o resultado**
+```python
+pprint.pprint(list(db.pubs.aggregate(pipeline)))
+```
+
+##TOP 5 - Pubs
+
+Usando as técnicas de agregação é muito simples encontrar os nomes mais populares, bastando apenas agrupar pelo nome e depois resumir todas as ocorrências. Nesse exemplo os nomes foram classificados pelo valor somado e depois limitado as 5 maiores ocorrências:
+
++ 1 - Red Lion
++ 2 - Royal Oak
++ 3 - New Inn
++ 4 - White Hart
++ 5 - Crown
+
+>**Curiosidade**: Tanto o método de pipeline quanto o de mapReduce levaram em média 0.9 segundos para serem executados.
+
+###Considerações finais
+Apesar da curva de aprendizado do MongoDB ser um pouco longa, pode se dizer que esse tipo de banco de dados é bastante útil para armazenar dados coletados na web, como por exemplo, as redes sociais e dados geolocalizados. Ele elimina a necessidade de escrever uma analisador, uma vez que você analisa os dados em tempo real. Conhecer a estrutura dos subdocumentos dos documentos nesse banco de dados nos ajuda melhor entender a programaçaõ para executar análises em Python(Ou outra linguagem de fácil conexão com o Mongo) usando MongoDB.
+
+
+
+
 
