@@ -24,30 +24,58 @@ Para utilizar o PyMongo em um ambiente de desenvolvimento Python é necessário 
 ```python
 from pymongo import MongoClient
 ```
+####Criando uma conexão
+```python
 
+client = pymongo.MongoClient()
 
+##nome do banco de dados
+db = client.bd_nosql 
 
+##nome da coleção
+collection = db.pubs
+```
 
+####Testando a conexão
+Para verificarmos uma conexão simples e se a mesma traz algum resultado podemos executar o código abaixo:
 
+```python
+myQuery = db.pubs.find({})
 
+for documento in myQuery:
+	print(documento)
+```
+>Essa operação irá trazer uma query dos pubs existentes na coleção pubs, também poderíamos ter usado a biblioteca pprint para imprimir a query em formato JSON
 
+###Algoritmos de agregação
+Existem vários modos agregação no MongoDB, nesse trabalho será demostrados as técnicas de pipeline e map reduce.
 
+**MapReduce**: Modelo para processar um grande volume de dados, dividindo o trabalho em um conjunto de tarefas.
 
+**MapReduce em Python**
+```python
+#Função de mapeamento de dados, retornando chaves de valores
+mapper = Code("""
+				function(){
+					emit(this.name, 1);
+				};
+			""")
+#Função reduce para percorrer os valores que estão associados com a chave(mapper)
+reducer = Code("""
+				function(key, values){
+					var total = 0;
+					for (var i = 0; i < values.length; i++){
+						total += values[i];
+					}
+					return total;
+				}
+			""")
+```
+**Imprimindo o resultado**
+```python
+#A query usado nessa parte retorna apenas os 5 pubs mais populares da fonte de dados utilizado
+result_pubs = db.pubs.map_reduce(mapper, reducer, "result", query={"name": {"$lt":5}})
+for document in result_pubs.find():
+	pprint.pprint(document)
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-^1^ *O OpenStreetMap é desenvolvido por uma comunidade voluntária de mapeadores que contribuem e mantêm atualizados os dados sobre estradas, trilhos, cafés, estações ferroviárias e muito mais por todo o mundo. [](http://www.openstreetmap.org) *
