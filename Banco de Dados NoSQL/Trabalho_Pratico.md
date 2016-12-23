@@ -87,7 +87,7 @@ pipeline = [
 	#Aqui fazemos o agrupamento de documentos pelo name e somamos 1 para cada nome igual encontrado
 	{"$group": {"_id": "$name", "value": {"$sum": 1}}},
   	
-  	#Ordenamos o pipeline anterior  	
+  	#Ordenamos o pipeline anterior
   	{"$sort": {"value": -1}},
 
   	#Limitamos a pesquisa de pubs em 5
