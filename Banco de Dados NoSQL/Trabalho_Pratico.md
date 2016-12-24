@@ -131,9 +131,10 @@ Apesar da curva de aprendizado do MongoDB ser um pouco longa, pode se dizer que 
 
 >repositório: [repositorio_trabalho_github](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/tree/master/Banco%20de%20Dados%20NoSQL/Trabalho_Pratico) 
 
->**Referências**: http://api.mongodb.com/python/current/examples/aggregation.html
-https://www.mongodb.com/blog/post/the-most-popular-pub-names
-https://github.com/robbierobert/MongoDB/blob/master/introPyMongo.md
+>**Referências**: 
+>http://api.mongodb.com/python/current/examples/aggregation.html
+>https://www.mongodb.com/blog/post/the-most-popular-pub-names
+>https://github.com/robbierobert/MongoDB/blob/master/introPyMongo.md
 
 
 
