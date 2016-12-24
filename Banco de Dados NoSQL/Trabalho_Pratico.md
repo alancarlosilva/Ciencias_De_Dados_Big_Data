@@ -129,7 +129,7 @@ pprint.pprint(list(collection.aggregate(pipeline)))
 ###Considerações finais
 Apesar da curva de aprendizado do MongoDB ser um pouco longa, pode se dizer que esse tipo de banco de dados é bastante útil para armazenar dados coletados na web, como por exemplo, as redes sociais e dados geolocalizados. Ele elimina a necessidade de escrever uma analisador, uma vez que você analisa os dados em tempo real. Conhecer a estrutura dos subdocumentos dos documentos nesse banco de dados nos ajuda melhor entender a programaçaõ para executar análises em Python(Ou outra linguagem de fácil conexão com o Mongo) usando MongoDB.
 
->repositório: [trabalho_pratico_github](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/tree/master/Banco%20de%20Dados%20NoSQL) 
+>repositório: [repositorio_trabalho_github](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/tree/master/Banco%20de%20Dados%20NoSQL/Trabalho_Pratico) 
 
 >**Referências**: http://api.mongodb.com/python/current/examples/aggregation.html
 https://www.mongodb.com/blog/post/the-most-popular-pub-names
