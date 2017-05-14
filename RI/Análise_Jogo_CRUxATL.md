@@ -25,5 +25,12 @@ A fonte de dados utilizada é o site https://twitter.com/, e será acessado pelo
 
 Nessa etapa, o nó `Twitter Streaming` recebe os twitters de Cruzeiro e Atlético em tempo real para análise.
 
-![ ](/home/alan/Ciencias_De_Dados_Big_Data/RI/RI_Trabalho/Config_twitter_streaming.png  "Twitter_Config")
+![ ](/home/alan/Imagens/RI_Trabalho/Config_twitter_streaming.png  "Twitter_Config")
 
+**Limpando os dados**
+
+**Processando os dados**
+
+Para o processamento e tratamento de textos, iremos usar o termos mais frequentes e exibí-los em uma Cloud Tag. Neste processo, o nó `Ponctuation Erasure` remove todos os caracteres de pontuação dos termos contidos em todos os documentos (linhas obtidas de cada twitter). O `Stop Word Filter` é o responsável por remover todos os termos do documento de entrada que correspondem com termos de uma lista (biblioteca de termos, preposições por exemplo). Com o `N Chars Filter`, foi excluído todos os termos abaixo de 4 caracteres da análise. O `Case Converter` transformou todos os termos em minúsculo. Por fim, o `Bag of Words Creator` separa em linhas cada um dos termos para a devida ação do nó `TF`.
+
+**Cloud Tag**
