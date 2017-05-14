@@ -21,10 +21,9 @@ Para chegar ao resultado desejado, vamos utilizar o sotware de mineração de da
 
 A fonte de dados utilizada é o site https://twitter.com/, e será acessado pelo `Twitter API Connector`
 
-![ ](/home/alan/Imagens/RI_Trabalho/Knime_Twitter.png  "Knime_Twitter")
-
+![ ](/home/alan/Ciencias_De_Dados_Big_Data/RI/RI_Trabalho/Knime_Twitter.png  "Twitter_API")
 
 Nessa etapa, o nó `Twitter Streaming` recebe os twitters de Cruzeiro e Atlético em tempo real para análise.
 
-![ ](/home/alan/Imagens/RI_Trabalho/Config_twitter_streaming.png  "Twitter_Config")
+![ ](/home/alan/Ciencias_De_Dados_Big_Data/RI/RI_Trabalho/Config_twitter_streaming.png  "Twitter_Config")
 
