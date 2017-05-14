@@ -25,7 +25,7 @@ A fonte de dados utilizada é o site https://twitter.com/, e será acessado pelo
 
 Nessa etapa, o nó `Twitter Streaming` recebe os twitters de Cruzeiro e Atlético em tempo real para análise.
 
-![ ](/home/alan/Imagens/RI_Trabalho/Config_twitter_streaming.png  "Twitter_Config")
+![ ](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/blob/master/RI/RI_Trabalho/Config_twitter_streaming.png  "Twitter_Config")
 
 **Limpando os dados**
 
