@@ -26,6 +26,12 @@ A fonte de dados utilizada é o site https://twitter.com/, e será acessado pelo
 Nessa etapa, o nó `Twitter Streaming` recebe os twitters de Cruzeiro e Atlético em tempo real para análise.
 
 ![ ](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/blob/master/RI/RI_Trabalho/Config_twitter_streaming.png  "Twitter_Config")
+***
+**Criando Banco de Dados Local**
+
+Após coleta dos twitters, foi criado um banco de dado local utilizando nó `Database Writer` e `SQLite Connector`. Obs.: Com um banco de dado local a consulta dos dados ficam mais eficientes.
+
+![ ](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/blob/master/RI/RI_Trabalho/twitter_bd.png  "twitter_bd")
 
 **Limpando os dados**
 
