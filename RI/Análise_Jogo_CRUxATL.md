@@ -1,4 +1,4 @@
-#![ ](https://i.ytimg.com/vi/cqqXlu-DB4k/hqdefault.jpg  "FinalMineiro")
+#![ ](http://aovivonatv.com/fotos/f230826991ea0f5d76ad12ead4f2f0a0.jpg "FinalMineiro")
 
 **A final mineira entre Cruzeiro X Atlético - MG**
 
@@ -40,6 +40,8 @@ Após coleta dos twitters, foi criado um banco de dado local utilizando nó `Dat
 Para o processamento e tratamento de textos, iremos usar o termos mais frequentes e exibí-los em uma Cloud Tag. Neste processo, o nó `Ponctuation Erasure` remove todos os caracteres de pontuação dos termos contidos em todos os documentos (linhas obtidas de cada twitter). O `Stop Word Filter` é o responsável por remover todos os termos do documento de entrada que correspondem com termos de uma lista (biblioteca de termos, preposições por exemplo). Com o `N Chars Filter`, foi excluído todos os termos abaixo de 10 caracteres da análise. O `Case Converter` transformou todos os termos em minúsculo. Por fim, o `Bag of Words Creator` separa em linhas cada um dos termos para a devida ação do nó `TF`.
 
 **Cloud Tag**
+
+![ ](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/blob/master/RI/RI_Trabalho/twitter_cloud.png "twitter_cloud_tag")
 
 **Evolução de posts - twitters**
 
