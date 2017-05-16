@@ -53,4 +53,4 @@ Por fim, após processamento da frequência de horário, temos o gráfico de his
 
 ![ ](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/blob/master/RI/RI_Trabalho/evolucao_posts_twitter.png "twitter_evolucao")
 
-Podemos observar nesse gráfico a evolução de postagens por minuto, do qual ilustra com precisão o comportamento da torcida. Aos 12 minutos da etapa inicial, o primeiro gol do Atlético - MG marcado por Robinho fez a festa no estádio e também no twitter, foram mais de 700 posts por minuto após o gol anotado pelo atacante. A explosão veio aos 24 minutos da etapa final quando o Atlético - MG marcou o segundo gol atingindo mais de 800 posts por minuto.
+Podemos observar nesse gráfico a evolução de postagens por minuto, do qual ilustra com precisão o comportamento da torcida. Aos 12 minutos da etapa inicial, o primeiro gol do Atlético - MG marcado por Robinho fez a festa no estádio e também no twitter, foram mais de 700 posts por minuto após o gol anotado pelo atacante. A explosão veio após os 24 minutos da etapa final quando o Atlético - MG marcou o segundo gol atingindo mais de 800 posts por minuto.
