@@ -33,8 +33,6 @@ Após coleta dos twitters, foi criado um banco de dado local utilizando nó `Dat
 
 ![ ](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/blob/master/RI/RI_Trabalho/twitter_bd.png  "twitter_bd")
 
-**Limpando os dados**
-
 **Processando os dados**
 
 Para o processamento e tratamento de textos, iremos usar o termos mais frequentes e exibí-los em uma Cloud Tag. Neste processo, o nó `Ponctuation Erasure` remove todos os caracteres de pontuação dos termos contidos em todos os documentos (linhas obtidas de cada twitter). O `Stop Word Filter` é o responsável por remover todos os termos do documento de entrada que correspondem com termos de uma lista (biblioteca de termos, preposições por exemplo). Com o `N Chars Filter`, foi excluído todos os termos abaixo de 10 caracteres da análise. O `Case Converter` transformou todos os termos em minúsculo. Por fim, o `Bag of Words Creator` separa em linhas cada um dos termos para a devida ação do nó `TF`.
