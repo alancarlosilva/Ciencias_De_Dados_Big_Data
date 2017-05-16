@@ -43,6 +43,10 @@ Para o processamento e tratamento de textos, iremos usar o termos mais frequente
 
 **Evolução de posts - twitters**
 
-Para o processamento 
+Para o processamento da evolução dos posts, foi extraído a coluna `time`e exportado para um documento `.csv` do qual foi feito uma estatística de frequência dos horários de posts durante o jogo.
+
+![ ]( https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/blob/master/RI/RI_Trabalho/coluna_time.PNG "twitter_coluna")
+
+Por fim, após processamento da frequência de horário, temos o gráfico de histograma abaixo:
 
 ![ ](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/blob/master/RI/RI_Trabalho/evolucao_posts_twitter.png "twitter_evolucao")
