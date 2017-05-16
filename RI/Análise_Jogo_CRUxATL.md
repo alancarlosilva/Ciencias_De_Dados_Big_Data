@@ -42,4 +42,4 @@ Para o processamento e tratamento de textos, iremos usar o termos mais frequente
 **Cloud Tag**
 
 **Evolução de posts - twitters**
-
+![ ](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/blob/master/RI/RI_Trabalho/evolucao_posts_twitter.png "twitter_evolucao")
