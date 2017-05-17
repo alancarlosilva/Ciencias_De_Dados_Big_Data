@@ -39,7 +39,7 @@ Para o processamento e tratamento de textos, iremos usar o termos mais frequente
 
 **Cloud Tag**
 
-![ ](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/blob/master/RI/RI_Trabalho/twitter_cloud.png "twitter_cloud_tag")
+![ ](https://github.com/alancarlosilva/Ciencias_De_Dados_Big_Data/blob/master/RI/RI_Trabalho/twitter_2.png "twitter_cloud_tag")
 
 **Evolução de posts - twitters**
 
